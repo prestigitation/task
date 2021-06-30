@@ -1,9 +1,12 @@
 import './dep_history.css'
 import {useState} from 'react'
 import showmore from './department_history_showmore.svg'
-import zavkaf from './zavkaf.svg'
-import bgpart1 from './bgpart1.svg'
-import bgpart2 from './bgpart2.svg'
+import React from "react";
+import "./index.css";
+import images from "./assets/image";
+import BorderSVG from "./pages/components/gloabal/UI/SVGComponents/BorderSVG";
+import BurgerSVGbg from "./pages/components/gloabal/UI/SVGComponents/BurgerSVGbg";
+
 const DepartmentHistory = () => {
     function showMore() {
         setDepartmentFullText(!department_fulltext)
@@ -40,21 +43,19 @@ const DepartmentHistory = () => {
                     </div>
                 </div>
             </div>
-            <div className="dep_history_logo">
-                <div className="dep_history_images">
-                    <img src={zavkaf} id="zavkaf"/> 
-                    <img src={bgpart1} id='dep_history_bg1'/>
-                    <img src={bgpart2} id='dep_history_bg2'/>
+            <div className="department-history-wrapper-la">
+                <div className="department-history-wrapper-image-la">
+                    <BurgerSVGbg className={"burger-back"}/>
+                    <BorderSVG className={"border-back"}/>
+                    <div className={"department-history-image-la"}>
+                        <img src={images.tyagulska} alt="images.tyagulska"/>
+                    </div>
                 </div>
-                <div className="dep_history_logo_text">
-                    <div className="dep_history_chief">
-                        Тягульская
-                    </div>
-                    <div className="dep_history_chief_data">
-                        Людмила Анатольевна
-                    </div>
-                    <div className="dep_history_chief_degree">
-                        Заведующий кафедрой, кандидат экономических наук, доцент 
+                <div className="department-history-wrapper-info-la">
+                    <div className={"info-la-lastName"}>Тягульская</div>
+                    <div className={"info-la-name-secondName"}>Людмила Анатольевна</div>
+                    <div className={"info-la-status"}>Заведующий кафедрой, кандидат экономических наук,
+                        доцент
                     </div>
                 </div>
             </div>
